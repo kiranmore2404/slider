@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0px;
+        height: 0px;
+      }
+
+      .main-slider {
+        margin-top: 10px;
+        margin: 5px;
+
+        width: 200px;
+        height: 100vh;
+        border-right: 2px solid rgb(246, 239, 239);
+        box-shadow: 0px 0px 5px 5px rgb(77, 72, 72);
+        visibility: hidden;
+      }
+
+      .slider {
+        background-color: #fff;
+        padding-left: 10px;
+        width: 150px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-items: center;
+        margin-bottom: 30px;
+        margin-top: 10px;
+      }
+
+      .slider:hover {
+        border: 2px solid black;
+        border-radius: 10px 10px;
+        box-shadow: 0px 0px 5px 5px gray;
+      }
+
+      .home {
+        text-decoration: none;
+        color: black;
+        margin-left: 5px;
+        font-size: 20px;
+      }
+      .fa-bars {
+        font-size: 25px;
+      }
+      .fa-solid {
+        margin-left: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      .fa-xmark {
+        font-size: 35px;
+        margin-left: 170px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <i class="fa-solid fa-bars" onclick="opensidebar() " id="hamberger"></i>
+   
+    <div class="main-slider" id="sliderop">
+        <h2 style="color: red;">Gmail </h2>
+      <div>
+        <i class="fa-solid fa-xmark" onclick="closebar()"></i>
+      </div>
+      <div class="slider">
+        <div>
+          <i class="fa-solid fa-house fa-bars"></i>
+          <a href="#" class="home">&nbsp; home</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div>
+          <i class="fa-solid fa-download"></i>
+          <a href="#" class="home">&nbsp; down</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div>
+          <i class="fa-solid fa-address-card fa-bars"></i>
+          <a href="#" class="home">&nbsp; contact</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div>
+          <i class="fa-solid fa-seedling fa-bars"></i>
+          <a href="#" class="home">&nbsp; info</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div>
+          <i class="fa-solid fa-person"></i>
+          <a href="#" class="home fa-bars">&nbsp; man</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div>
+          <i class="fa-solid fa-share fa-bars"></i>
+          <a href="#" class="home">&nbsp; logout</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div>
+          <i class="fa-solid fa-users fa-bars"></i>
+          <a href="#" class="home">&nbsp; Team</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function opensidebar() {
+        let openside = document.getElementById("sliderop");
+        openside.style.visibility = "visible";
+        let ham = document.getElementById("hamberger");
+        ham.style.visibility = "hidden";
+      }
+      function closebar() {
+        let openside = document.getElementById("sliderop");
+        openside.style.visibility = "hidden";
+        let ham = document.getElementById("hamberger");
+        ham.style.visibility = "visible";
+      }
+    </script>
+  </body>
+</html>
